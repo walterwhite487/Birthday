@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday, Amma! 💖</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Georgia', serif;
+    background: linear-gradient(135deg, #ffe0ec 0%, #ffd1e8 40%, #ffe9f3 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    padding: 20px;
+  }
+
+  .heart {
+    position: absolute;
+    color: #ff6fa5;
+    opacity: 0.5;
+    animation: floatUp linear infinite;
+    pointer-events: none;
+  }
+  @keyframes floatUp {
+    0%   { transform: translateY(100vh) scale(0.6); opacity: 0; }
+    20%  { opacity: 0.6; }
+    100% { transform: translateY(-10vh) scale(1.2); opacity: 0; }
+  }
+
+  .card {
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 24px;
+    padding: 38px 34px;
+    max-width: 520px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(255, 105, 160, 0.35);
+    border: 3px solid #ffd6e7;
+    position: relative;
+    z-index: 2;
+    animation: popIn 0.6s ease;
+  }
+  @keyframes popIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to   { transform: scale(1); opacity: 1; }
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    color: #d6336c;
+    margin-bottom: 16px;
+  }
+  h2 {
+    font-size: 1.45rem;
+    color: #b02a5b;
+    margin-bottom: 16px;
+  }
+
+  .letter {
+    color: #7a3b56;
+    font-size: 1rem;
+    line-height: 1.7;
+    text-align: left;
+    margin-bottom: 24px;
+  }
+  .letter p { margin-bottom: 14px; }
+  .letter .signature {
+    text-align: right;
+    font-style: italic;
+    color: #d6336c;
+    margin-top: 4px;
+  }
+
+  p.center {
+    color: #7a3b56;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  button {
+    background: linear-gradient(135deg, #ff6fa5, #ff8fab);
+    color: white;
+    border: none;
+    padding: 13px 32px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-family: inherit;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(255, 105, 160, 0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  button:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 12px 26px rgba(255, 105, 160, 0.55);
+  }
+
+  .gift {
+    font-size: 5.5rem;
+    cursor: pointer;
+    display: inline-block;
+    animation: shake 1.6s ease-in-out infinite;
+    user-select: none;
+    transition: transform 0.3s;
+  }
+  .gift:hover { transform: scale(1.15); }
+  @keyframes shake {
+    0%, 100% { transform: rotate(0); }
+    10% { transform: rotate(-8deg); }
+    20% { transform: rotate(8deg); }
+    30% { transform: rotate(-6deg); }
+    40% { transform: rotate(6deg); }
+    50% { transform: rotate(0); }
+  }
+
+  .btn-row {
+    position: relative;
+    height: 70px;
+    margin-top: 20px;
+  }
+  #yesBtn {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-120%);
+    z-index: 3;
+  }
+  #noBtn {
+    position: absolute;
+    left: 50%;
+    transform: translateX(20%);
+    background: linear-gradient(135deg, #b0b0b0, #d0d0d0);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: left 0.25s ease, top 0.25s ease, transform 0.25s ease;
+  }
+
+  .photo-frame {
+    margin-top: 10px;
+    padding: 12px;
+    background: linear-gradient(135deg, #ffd6e7, #ffe9f3);
+    border-radius: 20px;
+    box-shadow: inset 0 0 0 3px white, 0 10px 30px rgba(255, 105, 160, 0.3);
+    animation: popIn 0.8s ease;
+  }
+  .photo-frame img {
+    width: 100%;
+    max-height: 320px;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+  }
+  .caption {
+    margin-top: 14px;
+    font-style: italic;
+    color: #d6336c;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+  }
+
+  .hidden { display: none; }
+
+  .sparkle {
+    font-size: 1.3rem;
+    letter-spacing: 6px;
+    color: #ff6fa5;
+    margin-bottom: 8px;
+  }
+</style>
+</head>
+<body>
+
+<div id="hearts"></div>
+
+<!-- STEP 1: Love letter -->
+<div class="card" id="step1">
+  <div class="sparkle">✿ ❀ ✿</div>
+  <h1>Happy Birthday, Amma 💖</h1>
+  <div class="letter">
+    <p>
+      amma, nen enni tappulu chesna forgive chesthav.. nen entha allari chesna
+      bharisthav.. nen chala lucky ga feel ayithunna nik puttinandhuku.. nen
+      ilane untu.. ninnu dabbulu adguthu.. allari chesthu unta.. vache janma
+      antu unte nen malli nike puttali ani anukuntunnaa..
+    </p>
+  </div>
+  <button onclick="show('step2')">okay, there's more 👀💌</button>
+</div>
+
+<!-- STEP 2: Gift -->
+<div class="card hidden" id="step2">
+  <h2>wait wait wait…</h2>
+  <p class="center" id="giftMsg">there's a gift. tap it 🎁</p>
+  <div class="gift" id="giftBox" onclick="openGift()">🎁</div>
+</div>
+
+<!-- STEP 3: Yes / No -->
+<div class="card hidden" id="step3">
+  <h2>quick question…</h2>
+  <p class="center">do you know how much I love you? 👀</p>
+  <div class="btn-row">
+    <button id="yesBtn" onclick="showPhoto()">yes 💕</button>
+    <button id="noBtn" onmouseover="dodge()" onclick="dodge()">no</button>
+  </div>
+</div>
+
+<!-- STEP 4: Photo reveal -->
+<div class="card hidden" id="step4">
+  <h2>knew it 🥰</h2>
+  <div class="photo-frame">
+    <!-- 🔽 Change "mom.jpg" to your actual photo filename -->
+    <img id="momPhoto" src="mom.jpg" alt="My beautiful mom">
+    <p class="caption">i love you amma 💖</p>
+  </div>
+</div>
+
+<script>
+  const heartSymbols = ['💖','💕','🌸','💗','🌷','💝'];
+  const heartsContainer = document.getElementById('hearts');
+  for (let i = 0; i < 18; i++) {
+    const h = document.createElement('div');
+    h.className = 'heart';
+    h.textContent = heartSymbols[Math.floor(Math.random() * heartSymbols.length)];
+    h.style.left = Math.random() * 100 + 'vw';
+    h.style.fontSize = (14 + Math.random() * 22) + 'px';
+    h.style.animationDuration = (8 + Math.random() * 8) + 's';
+    h.style.animationDelay = (Math.random() * 8) + 's';
+    heartsContainer.appendChild(h);
+  }
+
+  function show(id) {
+    document.querySelectorAll('.card').forEach(c => c.classList.add('hidden'));
+    document.getElementById(id).classList.remove('hidden');
+  }
+
+  function openGift() {
+    const box = document.getElementById('giftBox');
+    box.textContent = '💝';
+    box.style.animation = 'none';
+    setTimeout(() => show('step3'), 700);
+  }
+
+  function dodge() {
+    const noBtn = document.getElementById('noBtn');
+    const card = document.getElementById('step3');
+    const cardRect = card.getBoundingClientRect();
+
+    const maxX = cardRect.width - noBtn.offsetWidth - 20;
+    const maxY = cardRect.height - noBtn.offsetHeight - 20;
+    const newX = Math.random() * maxX + 10;
+    const newY = Math.random() * maxY + 10;
+
+    noBtn.style.position = 'absolute';
+    noBtn.style.left = newX + 'px';
+    noBtn.style.top = newY + 'px';
+    noBtn.style.transform = 'none';
+  }
+
+  function showPhoto() {
+    show('step4');
+  }
+</script>
+
+</body>
+</html>
